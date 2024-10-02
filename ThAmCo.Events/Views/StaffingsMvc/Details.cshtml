@@ -1,0 +1,28 @@
+﻿@model ThAmCo.Events.Data.Staffing
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Staffing | Details</h2>
+<div>
+    <a asp-action="Index">Back to Staffing List</a> |
+    <a asp-action="Edit" asp-route-id="@Model.StaffId">Edit</a> 
+</div>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Event)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Event.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Attended)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Attended)
+        </dd>
+    </dl>
+</div>

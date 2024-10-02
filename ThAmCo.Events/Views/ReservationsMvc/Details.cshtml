@@ -1,0 +1,35 @@
+﻿@model ThAmCo.Venues.Data.Reservation
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Reservation | Details</h2>
+<div>
+    <a asp-action="Index">Back to Reservation</a> |
+    <a asp-action="Edit" asp-route-id="@Model.Reference">Edit</a> 
+</div>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Availability)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Availability.VenueCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WhenMade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WhenMade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StaffId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StaffId)
+        </dd>
+    </dl>
+</div>

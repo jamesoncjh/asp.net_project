@@ -1,0 +1,36 @@
+﻿@model ThAmCo.Venues.Data.Venue
+
+@{
+    ViewData["Title"] = "Details";
+}
+<link rel="stylesheet" href="~/css/details.css"/>
+
+<h2>Venue | Details</h2>
+<div>
+    <a asp-action="Index">Back to Venues</a> |
+    <a asp-action="Edit" asp-route-id="@Model.Code">Edit</a> 
+</div>
+<div>
+
+        <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Capacity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Capacity)
+        </dd>
+    </dl>
+</div>

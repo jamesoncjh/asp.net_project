@@ -1,0 +1,27 @@
+.container {
+   width: 800px;
+}
+h2 {
+    margin-top: 25px
+}
+img {
+    border-radius: 0.25rem;
+}
+.container-img {
+    border-radius: 0.25rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.container-description {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+}

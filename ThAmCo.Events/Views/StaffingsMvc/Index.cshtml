@@ -1,0 +1,61 @@
+﻿@model IEnumerable<ThAmCo.Events.Data.Staffing>
+
+@{
+    ViewData["Title"] = "Staffing";
+}
+
+<h2>Staffing List</h2>
+
+<link rel="stylesheet" href="~/css/staffing.css"/>
+<p>
+    <a asp-area="" asp-controller="Home" asp-action="Index">Back to Homepage</a> |
+    <a asp-action="Create">Create New</a>
+</p>
+
+@*Warning messages*@
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong>Attention!</strong> There are fewer than one member of staff per 10 guests assigned to an Event!
+</div>
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong>Attention!</strong> There is not a first-aider assigned to an Event!
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Event)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Staff)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Attended)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Event.Title)
+            </td>
+            <th>
+                @*@Html.DisplayNameFor(modelItem => item.Staff.Email) *@
+                dickson@staff.example.com
+            </th>
+            <td>
+                @Html.DisplayFor(modelItem => item.Attended)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-staffId="@item.StaffId" asp-route-eventId="@item.EventId">Edit</a> |
+                <a asp-action="Details" asp-route-staffId="@item.StaffId" asp-route-eventId="@item.EventId">Details</a> |
+                <a asp-action="Delete" asp-route-staffId="@item.StaffId" asp-route-eventId="@item.EventId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

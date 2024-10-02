@@ -1,0 +1,25 @@
+﻿@model ThAmCo.Venues.Data.EventType
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Event Type | Details</h2>
+<div>
+    <a asp-action="Index">Back to EventTypes</a> |
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> 
+</div>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+    </dl>
+</div>
+
+

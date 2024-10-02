@@ -1,0 +1,36 @@
+﻿@model ThAmCo.Catering.Data.Menu
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Menu | Edit</h2>
+<div>
+    <a asp-action="Index">Back to Menu</a>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="MenuId" />
+            <div class="form-group">
+                <label asp-for="MenuName" class="control-label"></label>
+                <input asp-for="MenuName" class="form-control" />
+                <span asp-validation-for="MenuName" class="text-danger"></span>
+            </div>
+@*            <div class="form-group">
+                <label asp-for="FoodBookingId" class="control-label"></label>
+                <input asp-for="FoodBookingId" class="form-control" />
+                <span asp-validation-for="FoodBookingId" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <input type="submit" value="SAVE" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

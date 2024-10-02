@@ -1,0 +1,35 @@
+﻿@model ThAmCo.Catering.Data.FoodList
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Food List | Details</h2>
+<div>
+    <a asp-action="Index">Back to FoodList</a> |
+    <a asp-action="Edit" asp-route-id="@Model.FoodListId">Edit</a> 
+</div>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FoodName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FoodName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Menu)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Menu.MenuId)
+        </dd>
+    </dl>
+</div>

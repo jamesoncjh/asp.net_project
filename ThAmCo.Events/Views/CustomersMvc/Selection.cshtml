@@ -1,0 +1,57 @@
+﻿@model ThAmCo.Events.Data.Customer
+
+@{
+    ViewData["Title"] = "Customer Type";
+}
+<link rel="stylesheet" href="~/css/selection.css"/>
+<h2>Customer | Customer Type</h2>
+<div>
+    <a asp-action="Index">Back to Customers List</a>
+</div>
+<hr />
+<div class="container">
+    <form>
+        <div class="grid-wrapper grid-col-auto">
+          <label id="labelId" for="radio-card-1" class="radio-card">
+          <input type="radio" name="radio-card" id="radio-card-1"/>
+            <div class="card-content-wrapper">
+              <span class="check-icon"></span>
+              <div class="card-content">
+                <img id="image1"
+                  src="~/images/company.jpg"
+                  alt=""
+                />
+                <h4 id="title">Company Representative</h4>
+                <h5 id="caption">The person or persons appointed and approved in writing from time to time by the Company to act on its behalf for overall co- ordination.</h5>
+              </div>
+            </div>
+          </label>
+          <!-- /.radio-card -->
+          <label id="labelId" for="radio-card-2" class="radio-card">
+          <input type="radio" name="radio-card" id="radio-card-2"/>
+            <div class="card-content-wrapper">
+              <span class="check-icon"></span>
+              <div class="card-content">
+                <img id="image2"
+                  src="~/images/private.jpg"
+                  alt=""
+                />
+                <h4 id="title">Private</h4>
+                <h5 id="caption">For use by an individual for that person's own needs.</h5>
+              </div>
+            </div>
+          </label>
+          <!-- /.radio-card -->
+        </div>
+        <!-- /.grid-wrapper -->
+        <input id="next" type="button" asp-action="Create" value="CONFIRM" />
+    </form>
+      </div>
+      <!-- /.container -->
+<!-- partial -->
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

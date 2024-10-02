@@ -1,0 +1,33 @@
+﻿@model ThAmCo.Catering.Data.FoodBooking
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Food Booking | Delete</h2>
+<div>
+    <a asp-action="Index">Back to FoodBooking</a>
+</div>
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Menu)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Menu.MenuId)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="FoodBookingId" />
+        <input type="submit" value="DELETE" class="btn btn-default" /> 
+    </form>
+</div>

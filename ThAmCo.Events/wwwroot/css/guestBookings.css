@@ -1,0 +1,48 @@
+.checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    width: 20rem;
+}
+
+    .checkbox input {
+        display: none;
+    }
+
+        .checkbox input:checked ~ .checkbox__mark svg {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+.checkbox__mark {
+    margin-right: 0.5rem;
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    border: 0.2rem solid #000;
+}
+
+    .checkbox__mark svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.5);
+        width: 80%;
+        height: auto;
+        transition: all ease 0.2s;
+        opacity: 0;
+    }
+
+.checkbox--disabled {
+    color: grey;
+    pointer-events: none;
+}
+
+    .checkbox--disabled .checkbox__mark {
+        border-color: grey;
+    }
+
+    .checkbox--disabled .checkbox__mark {
+        border-color: grey;
+    }
